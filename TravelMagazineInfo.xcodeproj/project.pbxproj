@@ -13,6 +13,13 @@
 		998584A12C01D8020008F7FE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 998584A02C01D8020008F7FE /* Base */; };
 		998584A32C01D8030008F7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 998584A22C01D8030008F7FE /* Assets.xcassets */; };
 		998584A62C01D8030008F7FE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 998584A52C01D8030008F7FE /* Base */; };
+		998584AF2C01D91C0008F7FE /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584AE2C01D91C0008F7FE /* RestaurantTableViewController.swift */; };
+		998584B12C01D9870008F7FE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584B02C01D9870008F7FE /* Restaurant.swift */; };
+		998584B32C01D9DA0008F7FE /* RestaurantCustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584B22C01D9DA0008F7FE /* RestaurantCustomCellTableViewCell.swift */; };
+		998584B52C03427A0008F7FE /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584B42C03427A0008F7FE /* MagazineInfo.swift */; };
+		998584B72C03468B0008F7FE /* TravelMagazineInfolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584B62C03468B0008F7FE /* TravelMagazineInfolTableViewCell.swift */; };
+		998584B92C0346AE0008F7FE /* TravelMagazineInfolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584B82C0346AE0008F7FE /* TravelMagazineInfolTableViewController.swift */; };
+		998584BC2C035B2E0008F7FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 998584BB2C035B2E0008F7FE /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,12 @@
 		998584A22C01D8030008F7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		998584A52C01D8030008F7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		998584A72C01D8030008F7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		998584AE2C01D91C0008F7FE /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		998584B02C01D9870008F7FE /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		998584B22C01D9DA0008F7FE /* RestaurantCustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		998584B42C03427A0008F7FE /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
+		998584B62C03468B0008F7FE /* TravelMagazineInfolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMagazineInfolTableViewCell.swift; sourceTree = "<group>"; };
+		998584B82C0346AE0008F7FE /* TravelMagazineInfolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMagazineInfolTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998584BC2C035B2E0008F7FE /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 		9985848D2C01D8020008F7FE = {
 			isa = PBXGroup;
 			children = (
+				998584AD2C01D81D0008F7FE /* Restaurant */,
 				998584982C01D8020008F7FE /* TravelMagazineInfo */,
 				998584972C01D8020008F7FE /* Products */,
 			);
@@ -59,12 +74,25 @@
 				998584992C01D8020008F7FE /* AppDelegate.swift */,
 				9985849B2C01D8020008F7FE /* SceneDelegate.swift */,
 				9985849D2C01D8020008F7FE /* ViewController.swift */,
+				998584B42C03427A0008F7FE /* MagazineInfo.swift */,
 				9985849F2C01D8020008F7FE /* Main.storyboard */,
 				998584A22C01D8030008F7FE /* Assets.xcassets */,
 				998584A42C01D8030008F7FE /* LaunchScreen.storyboard */,
 				998584A72C01D8030008F7FE /* Info.plist */,
+				998584B62C03468B0008F7FE /* TravelMagazineInfolTableViewCell.swift */,
+				998584B82C0346AE0008F7FE /* TravelMagazineInfolTableViewController.swift */,
 			);
 			path = TravelMagazineInfo;
+			sourceTree = "<group>";
+		};
+		998584AD2C01D81D0008F7FE /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				998584AE2C01D91C0008F7FE /* RestaurantTableViewController.swift */,
+				998584B02C01D9870008F7FE /* Restaurant.swift */,
+				998584B22C01D9DA0008F7FE /* RestaurantCustomCellTableViewCell.swift */,
+			);
+			path = Restaurant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +111,9 @@
 			dependencies = (
 			);
 			name = TravelMagazineInfo;
+			packageProductDependencies = (
+				998584BB2C035B2E0008F7FE /* Kingfisher */,
+			);
 			productName = TravelMagazineInfo;
 			productReference = 998584962C01D8020008F7FE /* TravelMagazineInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 9985848D2C01D8020008F7FE;
+			packageReferences = (
+				998584BA2C035B2E0008F7FE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 998584972C01D8020008F7FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998584B12C01D9870008F7FE /* Restaurant.swift in Sources */,
 				9985849E2C01D8020008F7FE /* ViewController.swift in Sources */,
 				9985849A2C01D8020008F7FE /* AppDelegate.swift in Sources */,
+				998584AF2C01D91C0008F7FE /* RestaurantTableViewController.swift in Sources */,
+				998584B52C03427A0008F7FE /* MagazineInfo.swift in Sources */,
 				9985849C2C01D8020008F7FE /* SceneDelegate.swift in Sources */,
+				998584B72C03468B0008F7FE /* TravelMagazineInfolTableViewCell.swift in Sources */,
+				998584B92C0346AE0008F7FE /* TravelMagazineInfolTableViewController.swift in Sources */,
+				998584B32C01D9DA0008F7FE /* RestaurantCustomCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +348,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yun.TravelMagazineInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,6 +373,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +381,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yun.TravelMagazineInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		998584BA2C035B2E0008F7FE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		998584BB2C035B2E0008F7FE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 998584BA2C035B2E0008F7FE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9985848E2C01D8020008F7FE /* Project object */;
 }
