@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitiyDetailInfo" rowHeight="143" id="KGk-i7-Jjw" customClass="PopularityCitiyDetailInfoViewControllerTableViewCell" customModule="TravelMagazineInfo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="428" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2U-XF-1iP">
+                        <rect key="frame" x="307.66666666666669" y="4" width="112.33333333333331" height="135"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="C2U-XF-1iP" secondAttribute="height" multiplier="1:1.2" id="7SG-W3-fxo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUu-SL-lDx">
+                        <rect key="frame" x="8" y="4" width="291.66666666666669" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spA-AV-GO0">
+                        <rect key="frame" x="8" y="32" width="291.66666666666669" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSG-5U-hHG">
+                        <rect key="frame" x="8" y="57" width="291.66666666666669" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYK-eZ-vmq">
+                        <rect key="frame" x="370" y="4" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rYK-eZ-vmq" secondAttribute="height" id="MQ9-10-xp1"/>
+                            <constraint firstAttribute="width" constant="50" id="Ojy-yj-N6N"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rYK-eZ-vmq" firstAttribute="top" secondItem="C2U-XF-1iP" secondAttribute="top" placeholder="YES" id="0ob-ti-hsd"/>
+                    <constraint firstItem="dUu-SL-lDx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7nG-Kt-Ezz"/>
+                    <constraint firstItem="C2U-XF-1iP" firstAttribute="leading" secondItem="spA-AV-GO0" secondAttribute="trailing" constant="8" id="8MN-g6-VK5"/>
+                    <constraint firstItem="C2U-XF-1iP" firstAttribute="trailing" secondItem="rYK-eZ-vmq" secondAttribute="trailing" id="Bbr-zy-RiE"/>
+                    <constraint firstItem="spA-AV-GO0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="DmA-uS-F0l"/>
+                    <constraint firstItem="spA-AV-GO0" firstAttribute="top" secondItem="dUu-SL-lDx" secondAttribute="bottom" constant="4" id="Feg-tj-ZwW"/>
+                    <constraint firstAttribute="trailing" secondItem="C2U-XF-1iP" secondAttribute="trailing" constant="8" id="KVt-jW-8rZ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PSG-5U-hHG" secondAttribute="bottom" constant="4" id="LDW-J6-OUd"/>
+                    <constraint firstItem="C2U-XF-1iP" firstAttribute="leading" secondItem="PSG-5U-hHG" secondAttribute="trailing" constant="8" id="MkC-S3-Fy6"/>
+                    <constraint firstItem="PSG-5U-hHG" firstAttribute="top" secondItem="spA-AV-GO0" secondAttribute="bottom" constant="4" id="O41-QN-7nW"/>
+                    <constraint firstItem="dUu-SL-lDx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="X6a-vL-g0V"/>
+                    <constraint firstItem="C2U-XF-1iP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="ZFI-NR-6Yb"/>
+                    <constraint firstAttribute="bottom" secondItem="C2U-XF-1iP" secondAttribute="bottom" constant="4" id="d8W-Ti-HlG"/>
+                    <constraint firstItem="PSG-5U-hHG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hMP-77-G7P"/>
+                    <constraint firstItem="C2U-XF-1iP" firstAttribute="leading" secondItem="dUu-SL-lDx" secondAttribute="trailing" constant="8" id="oQH-8w-HWa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="citiyDetailDescriptionLabel" destination="spA-AV-GO0" id="fss-cw-fyB"/>
+                <outlet property="citiyDetailGradeSaveBookmarkLabel" destination="PSG-5U-hHG" id="APa-vc-Wdj"/>
+                <outlet property="citiyDetailImageView" destination="C2U-XF-1iP" id="20j-2H-IQN"/>
+                <outlet property="citiyDetailTitleLabel" destination="dUu-SL-lDx" id="g6E-J2-Jda"/>
+                <outlet property="likeButton" destination="rYK-eZ-vmq" id="cmQ-1T-gX9"/>
+            </connections>
+            <point key="canvasLocation" x="221.37404580152671" y="55.281690140845072"/>
+        </tableViewCell>
+    </objects>
+</document>
