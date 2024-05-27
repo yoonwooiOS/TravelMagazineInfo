@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="081-Hg-Wm6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BeE-7p-zuj">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="4"/>
+            <point key="canvasLocation" x="1954.9618320610687" y="3.5211267605633805"/>
         </scene>
         <!--Restaurant Table View Controller-->
         <scene sceneID="vXs-U1-ubc">
@@ -388,6 +388,73 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="662.67605633802816"/>
         </scene>
+        <!--Restaurant View Controller-->
+        <scene sceneID="yoD-w5-fBT">
+            <objects>
+                <viewController id="KxJ-zb-oT7" customClass="RestaurantViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FBb-hU-I38">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dWN-dt-FC2">
+                                <rect key="frame" x="0.0" y="209" width="393" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-HO-TZq">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KxJ-zb-oT7" id="Rr0-1W-rw1"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWK-vO-HpK">
+                                <rect key="frame" x="16" y="161" width="75" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="recommandButtonClicked:" destination="KxJ-zb-oT7" eventType="touchUpInside" id="Ja1-SP-bSM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-lG-AgC">
+                                <rect key="frame" x="93" y="161" width="75" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="costEffectivebuttonClicked:" destination="KxJ-zb-oT7" eventType="touchUpInside" id="cqc-Qo-za7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J43-Zt-1kD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tWK-vO-HpK" firstAttribute="top" secondItem="HJC-HO-TZq" secondAttribute="bottom" constant="2" id="9nT-KG-W0a"/>
+                            <constraint firstItem="dWN-dt-FC2" firstAttribute="trailing" secondItem="J43-Zt-1kD" secondAttribute="trailing" id="F80-1b-Yn3"/>
+                            <constraint firstAttribute="bottom" secondItem="dWN-dt-FC2" secondAttribute="bottom" id="JZ3-PE-4Ki"/>
+                            <constraint firstItem="dWN-dt-FC2" firstAttribute="leading" secondItem="J43-Zt-1kD" secondAttribute="leading" id="KWD-oF-pgO"/>
+                            <constraint firstItem="hFk-lG-AgC" firstAttribute="leading" secondItem="tWK-vO-HpK" secondAttribute="trailing" constant="2" id="Njh-KT-qOw"/>
+                            <constraint firstItem="dWN-dt-FC2" firstAttribute="top" secondItem="tWK-vO-HpK" secondAttribute="bottom" constant="2" id="No5-29-uln"/>
+                            <constraint firstItem="dWN-dt-FC2" firstAttribute="top" secondItem="HJC-HO-TZq" secondAttribute="bottom" constant="50" id="RD0-0u-SBX"/>
+                            <constraint firstItem="hFk-lG-AgC" firstAttribute="top" secondItem="HJC-HO-TZq" secondAttribute="bottom" constant="2" id="Rfm-dF-KE7"/>
+                            <constraint firstItem="HJC-HO-TZq" firstAttribute="top" secondItem="J43-Zt-1kD" secondAttribute="top" id="W2x-85-sYY"/>
+                            <constraint firstItem="tWK-vO-HpK" firstAttribute="leading" secondItem="J43-Zt-1kD" secondAttribute="leading" constant="16" id="WyQ-KW-4pz"/>
+                            <constraint firstItem="dWN-dt-FC2" firstAttribute="top" secondItem="hFk-lG-AgC" secondAttribute="bottom" constant="2" id="X95-zw-gpq"/>
+                            <constraint firstItem="HJC-HO-TZq" firstAttribute="leading" secondItem="J43-Zt-1kD" secondAttribute="leading" id="ZU8-dU-IMW"/>
+                            <constraint firstItem="HJC-HO-TZq" firstAttribute="trailing" secondItem="J43-Zt-1kD" secondAttribute="trailing" id="sPQ-mK-iiU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Cl-oh-Rj0"/>
+                    <connections>
+                        <outlet property="costEffectivebutton" destination="hFk-lG-AgC" id="qkf-gW-32p"/>
+                        <outlet property="foodTableView" destination="dWN-dt-FC2" id="Tga-TC-KvU"/>
+                        <outlet property="navigationTitle" destination="4Cl-oh-Rj0" id="V0V-ZR-Y1p"/>
+                        <outlet property="searchBar" destination="HJC-HO-TZq" id="l8L-dm-tFq"/>
+                        <outlet property="todayRecommandButton" destination="tWK-vO-HpK" id="hnd-rY-j0L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="woJ-03-CaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510.68702290076334" y="-619.0140845070423"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="htB-lP-T9A">
             <objects>
@@ -423,6 +490,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIR-Mj-CoA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2854.1984732824426" y="661.97183098591552"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p6Y-Iz-QPA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BeE-7p-zuj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bsj-HQ-5bP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KxJ-zb-oT7" kind="relationship" relationship="rootViewController" id="Jje-zb-oi2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeE-D9-xTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1437.4045801526718" y="-619.0140845070423"/>
         </scene>
     </scenes>
     <resources>
