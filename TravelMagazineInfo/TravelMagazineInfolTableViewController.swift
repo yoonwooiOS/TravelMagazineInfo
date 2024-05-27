@@ -12,9 +12,12 @@ class TravelMagazineInfolTableViewController: UITableViewController {
     
     let travelImazineInfo = MagazineInfo()
     
+    @IBOutlet var titleLabel: UINavigationItem!
     override func viewDidLoad() {
         print(travelImazineInfo)
-        tableView.rowHeight = 500
+        
+        titleLabel.title = "SeSAC TRAVEL"
+        tableView.rowHeight = 435
     }
     
     
@@ -26,6 +29,7 @@ class TravelMagazineInfolTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelMagazineInfo") as! TravelMagazineInfolTableViewCell
         let data = travelImazineInfo.magazine[indexPath.row]
+        
         let url = URL(string: data.photo_image)
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyMMdd"
@@ -34,8 +38,7 @@ class TravelMagazineInfolTableViewController: UITableViewController {
             print(data.date)
             cell.dateLabel.text = data.date
             return cell }
-        
-        dateformatter.dateFormat = "yy년 MM월 dd일"
+        dateformatter.dateFormat = "yy년MM월dd일"
         let formatteddate = dateformatter.string(from: date)
         
         cell.titleLabel.text = data.title
@@ -46,10 +49,12 @@ class TravelMagazineInfolTableViewController: UITableViewController {
         
         cell.subtitleLabel.text = data.subtitle
         cell.subtitleLabel.font = .systemFont(ofSize: 14)
-        cell.subtitleLabel.textColor = .systemGray4
+        cell.subtitleLabel.textColor = .systemGray3
         
         cell.dateLabel.text = formatteddate
         cell.dateLabel.textAlignment = .right
+        cell.dateLabel.font = .systemFont(ofSize: 14)
+        cell.dateLabel.textColor = .systemGray3
         
         cell.travelImage.kf.setImage(with:url)
         cell.travelImage.contentMode = .scaleToFill

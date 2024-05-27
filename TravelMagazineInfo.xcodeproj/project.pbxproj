@@ -74,11 +74,11 @@
 				998584992C01D8020008F7FE /* AppDelegate.swift */,
 				9985849B2C01D8020008F7FE /* SceneDelegate.swift */,
 				9985849D2C01D8020008F7FE /* ViewController.swift */,
-				998584B42C03427A0008F7FE /* MagazineInfo.swift */,
 				9985849F2C01D8020008F7FE /* Main.storyboard */,
 				998584A22C01D8030008F7FE /* Assets.xcassets */,
 				998584A42C01D8030008F7FE /* LaunchScreen.storyboard */,
 				998584A72C01D8030008F7FE /* Info.plist */,
+				998584B42C03427A0008F7FE /* MagazineInfo.swift */,
 				998584B62C03468B0008F7FE /* TravelMagazineInfolTableViewCell.swift */,
 				998584B82C0346AE0008F7FE /* TravelMagazineInfolTableViewController.swift */,
 			);
@@ -88,8 +88,8 @@
 		998584AD2C01D81D0008F7FE /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				998584AE2C01D91C0008F7FE /* RestaurantTableViewController.swift */,
 				998584B02C01D9870008F7FE /* Restaurant.swift */,
+				998584AE2C01D91C0008F7FE /* RestaurantTableViewController.swift */,
 				998584B22C01D9DA0008F7FE /* RestaurantCustomCellTableViewCell.swift */,
 			);
 			path = Restaurant;

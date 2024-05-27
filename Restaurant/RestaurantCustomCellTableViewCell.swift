@@ -7,9 +7,20 @@
 
 import UIKit
 
-class RestaurantCustomCellTableViewCell: UITableViewCell {
-
+class RestaurantCustomCellTableViewCell:
     
-       
+    
+    
+    UITableViewCell {
+
+    @IBOutlet var menuImageView: UIImageView!
+    
+    @IBOutlet var restaurantNameLabel: UILabel!
+    @IBOutlet var restaurantAddressLabel: UILabel!
+    @IBOutlet var restaurantPhoneNumberLabel: UILabel!
+    @IBOutlet var restaurantPriceLabel: UILabel!
+    
+    @IBOutlet var restaurantCategoryLabel: UILabel!
+    
 
 }
