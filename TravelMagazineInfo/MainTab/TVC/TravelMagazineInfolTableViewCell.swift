@@ -43,7 +43,6 @@ class TravelMagazineInfolTableViewCell:
         travelImage.contentMode = .scaleAspectFill
         travelImage.layer.cornerRadius = 10
         travelImage.clipsToBounds = true
-        
     }
     
     
