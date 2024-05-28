@@ -19,18 +19,8 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationTitleLabel.title = "도시 상세 정보"
         
-        cityDetailInfoTableView.rowHeight = 130
-        cityDetailInfoTableView.delegate = self
-        cityDetailInfoTableView.dataSource = self
-        
-        let xibDetailInfo = UINib(nibName:"PopularityCitiyDetailInfoViewControllerTableViewCell",  bundle: nil)
-        cityDetailInfoTableView.register(xibDetailInfo, forCellReuseIdentifier: "CitiyDetailInfo")
-        
-        let xibAd = UINib(nibName: "AdTableViewCell", bundle: nil)
-        cityDetailInfoTableView.register(xibAd, forCellReuseIdentifier: "adcell")
-        
+        configureTalbeView()
         
         
     }
@@ -59,5 +49,22 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             
         }
     }
+    func configureTalbeView() {
+        
+        navigationTitleLabel.title = "도시 상세 정보"
+        
+        cityDetailInfoTableView.rowHeight = 130
+        cityDetailInfoTableView.delegate = self
+        cityDetailInfoTableView.dataSource = self
+        
+        let xibDetailInfo = UINib(nibName:"PopularityCitiyDetailInfoViewControllerTableViewCell",  bundle: nil)
+        cityDetailInfoTableView.register(xibDetailInfo, forCellReuseIdentifier: "CitiyDetailInfo")
+        
+        let xibAd = UINib(nibName: "AdTableViewCell", bundle: nil)
+        cityDetailInfoTableView.register(xibAd, forCellReuseIdentifier: "adcell")
+        
+        
+    }
+    
 }
 

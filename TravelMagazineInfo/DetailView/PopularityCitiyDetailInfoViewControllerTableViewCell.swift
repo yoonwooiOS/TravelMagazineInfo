@@ -21,10 +21,10 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         
         super.awakeFromNib()
         
-        citiyDetailTitleLabel.font = .boldSystemFont(ofSize: 18)
-        citiyDetailDescriptionLabel.numberOfLines = 0
-        citiyDetailDescriptionLabel.font = .systemFont(ofSize: 14)
-        citiyDetailDescriptionLabel.textColor = .gray
+        citiyDetailTitleLabel.titlePrimaryLabel(textAlignment: .left, fontSize: 18, textColor: .black)
+        citiyDetailDescriptionLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .gray)
+        
+//
         likeButton.tintColor = .white
     }
     

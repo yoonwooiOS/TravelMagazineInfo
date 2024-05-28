@@ -22,10 +22,12 @@ class AdTableViewCell: UITableViewCell {
     
     func configureAdCell(data:Travel) {
         adTitleLabel.text = data.title
+        
+        adTitleLabel.titlePrimaryLabel(textAlignment: .center, fontSize: 14, textColor: .black)
+        
         adLabel.text = " ad "
         adLabel.backgroundColor = .white
         adLabel.layer.cornerRadius = 7
-        // true 값 주지 않으면 cornerRadius 안먹음
         adLabel.clipsToBounds = true
         bgView.backgroundColor = randomColor()
         bgView.layer.cornerRadius = 10
