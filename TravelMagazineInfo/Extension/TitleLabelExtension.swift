@@ -11,6 +11,7 @@ extension UILabel {
     func titlePrimaryLabel(textAlignment:NSTextAlignment,   fontSize size:Int,textColor color:UIColor) {
         
         self.font = .boldSystemFont(ofSize: CGFloat(size))
+        self.lineBreakMode = .byWordWrapping
         self.textAlignment = textAlignment
         self.textColor = color
         self.numberOfLines = 0
