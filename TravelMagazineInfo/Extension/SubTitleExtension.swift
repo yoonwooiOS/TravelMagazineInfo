@@ -10,12 +10,11 @@ import UIKit
 
 extension UILabel {
     
-    func subtitlePrimaryLabel(textColor color:UIColor) {
+    func subtitlePrimaryLabel(textAlignment:NSTextAlignment,   fontSize size:Int,textColor color:UIColor) {
         
-        self.font = .systemFont(ofSize: 14)
-        self.textAlignment = .left
+        self.font = .systemFont(ofSize: CGFloat(size))
+        self.textAlignment = textAlignment
         self.textColor = color
-        self.layer.borderColor = UIColor.black.cgColor
         self.numberOfLines = 0
 
         

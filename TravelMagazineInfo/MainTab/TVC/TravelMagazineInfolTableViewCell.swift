@@ -19,9 +19,20 @@ class TravelMagazineInfolTableViewCell:
     
     @IBOutlet var dateLabel: UILabel!
     
+    override class func awakeFromNib() {
+       
+        
+    }
+    func configureLabel() {
+        
+       
+        
+        
+    }
     
-    
-    
-    
+    func configureCell() {
+        
+        
+    }
     
 }

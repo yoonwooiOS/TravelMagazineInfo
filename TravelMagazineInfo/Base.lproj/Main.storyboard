@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BeE-7p-zuj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUH-Bh-FLL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,21 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="34c-UU-j2x">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="93"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzz-Hf-88S">
-                                    <rect key="frame" x="119" y="21" width="75" height="42"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                </button>
-                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelMagazineInfo" rowHeight="463" id="8zn-7j-DDp" customClass="TravelMagazineInfolTableViewCell" customModule="TravelMagazineInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="143" width="393" height="463"/>
+                                <rect key="frame" x="0.0" y="98" width="393" height="463"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8zn-7j-DDp" id="mvm-Mz-yVz">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="463"/>
@@ -109,7 +101,38 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oek-T6-JcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026.7175572519084" y="660.56338028169023"/>
+            <point key="canvasLocation" x="-616" y="792"/>
+        </scene>
+        <!--Travel Magazine Info View Controller-->
+        <scene sceneID="eQp-N4-H8z">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GpD-H5-qrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="d4U-qg-14j" customClass="TravelMagazineInfoViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Biy-zQ-KC8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-1d-6ff">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pvM-Pd-FuW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0lw-1d-6ff" firstAttribute="top" secondItem="pvM-Pd-FuW" secondAttribute="top" id="SVN-Oq-zzt"/>
+                            <constraint firstItem="pvM-Pd-FuW" firstAttribute="bottom" secondItem="0lw-1d-6ff" secondAttribute="bottom" id="aN1-SU-CKi"/>
+                            <constraint firstItem="0lw-1d-6ff" firstAttribute="leading" secondItem="pvM-Pd-FuW" secondAttribute="leading" id="mYK-O2-Q5U"/>
+                            <constraint firstItem="pvM-Pd-FuW" firstAttribute="trailing" secondItem="0lw-1d-6ff" secondAttribute="trailing" id="zRU-cR-IWz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="znF-7J-PKZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="0lw-1d-6ff" id="xmf-SF-1ZY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4707.6335877862593" y="-187.32394366197184"/>
         </scene>
         <!--Popularity City Detail Info View Controller-->
         <scene sceneID="IrV-Ap-0qd">
@@ -142,21 +165,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQi-r7-gOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3780.9160305343512" y="661.97183098591552"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1954.9618320610687" y="3.5211267605633805"/>
         </scene>
         <!--Restaurant Table View Controller-->
         <scene sceneID="vXs-U1-ubc">
@@ -386,12 +394,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gy-Is-eS6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="662.67605633802816"/>
+            <point key="canvasLocation" x="-1541" y="794"/>
         </scene>
-        <!--Restaurant View Controller-->
+        <!--Rest Info View Controller-->
         <scene sceneID="yoD-w5-fBT">
             <objects>
-                <viewController id="KxJ-zb-oT7" customClass="RestaurantViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KxJ-zb-oT7" customClass="RestInfoViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FBb-hU-I38">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +420,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="recommandButtonClicked:" destination="KxJ-zb-oT7" eventType="touchUpInside" id="Ja1-SP-bSM"/>
+                                    <action selector="todayRecommandButtonClicked:" destination="KxJ-zb-oT7" eventType="touchUpInside" id="odW-Dc-qbu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-lG-AgC">
@@ -420,7 +428,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="costEffectivebuttonClicked:" destination="KxJ-zb-oT7" eventType="touchUpInside" id="cqc-Qo-za7"/>
+                                    <action selector="costEffectivenessButtonClicked:" destination="KxJ-zb-oT7" eventType="touchUpInside" id="lsk-15-2MP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -444,16 +452,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Cl-oh-Rj0"/>
                     <connections>
-                        <outlet property="costEffectivebutton" destination="hFk-lG-AgC" id="qkf-gW-32p"/>
-                        <outlet property="foodTableView" destination="dWN-dt-FC2" id="Tga-TC-KvU"/>
-                        <outlet property="navigationTitle" destination="4Cl-oh-Rj0" id="V0V-ZR-Y1p"/>
-                        <outlet property="searchBar" destination="HJC-HO-TZq" id="l8L-dm-tFq"/>
-                        <outlet property="todayRecommandButton" destination="tWK-vO-HpK" id="hnd-rY-j0L"/>
+                        <outlet property="costEffectivenessButton" destination="hFk-lG-AgC" id="6C0-AS-mUX"/>
+                        <outlet property="navigationTitle" destination="4Cl-oh-Rj0" id="4EC-UN-91n"/>
+                        <outlet property="searchBar" destination="HJC-HO-TZq" id="9cz-ZY-G7b"/>
+                        <outlet property="tableView" destination="dWN-dt-FC2" id="92v-Wz-3kf"/>
+                        <outlet property="todayRecommandButton" destination="tWK-vO-HpK" id="NT2-Cr-ecS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woJ-03-CaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-510.68702290076334" y="-619.0140845070423"/>
+            <point key="canvasLocation" x="416.03053435114504" y="-619.0140845070423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="htB-lP-T9A">
@@ -492,22 +500,40 @@
             <point key="canvasLocation" x="2854.1984732824426" y="661.97183098591552"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="p6Y-Iz-QPA">
+        <scene sceneID="Iz3-g9-pyc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BeE-7p-zuj" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJp-jI-2ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q15-9D-Gaf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bsj-HQ-5bP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wBo-dN-IGd">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="KxJ-zb-oT7" kind="relationship" relationship="rootViewController" id="Jje-zb-oi2"/>
+                        <segue destination="d4U-qg-14j" kind="relationship" relationship="rootViewController" id="QHJ-je-ZZK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EeE-D9-xTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1437.4045801526718" y="-619.0140845070423"/>
+            <point key="canvasLocation" x="3779.3893129770991" y="-187.32394366197184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IvN-d3-Xmb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EUH-Bh-FLL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pz-57-Qit">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KxJ-zb-oT7" kind="relationship" relationship="rootViewController" id="wga-On-ytD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4a-BX-LZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510.68702290076334" y="-619.0140845070423"/>
         </scene>
     </scenes>
     <resources>

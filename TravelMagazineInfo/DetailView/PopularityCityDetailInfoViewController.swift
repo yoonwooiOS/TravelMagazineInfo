@@ -16,8 +16,6 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
     
     var citiyInfoList:[Travel] = TravelInfo().travel
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +31,8 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
         let xibAd = UINib(nibName: "AdTableViewCell", bundle: nil)
         cityDetailInfoTableView.register(xibAd, forCellReuseIdentifier: "adcell")
         
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,9 +42,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let data = citiyInfoList[indexPath.row]
-        
         if data.ad {
-            
             let adcell = tableView.dequeueReusableCell(withIdentifier: "adcell", for: indexPath) as! AdTableViewCell
             
             adcell.configureAddCellLayout(data: data)

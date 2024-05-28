@@ -10,25 +10,27 @@ import Kingfisher
 
 class TravelMagazineInfolTableViewController: UITableViewController {
     
-    let travelImazineInfo = MagazineInfo()
+    let travelImazineInfo = MagazineInfo().magazine
     
     @IBOutlet var titleLabel: UINavigationItem!
     override func viewDidLoad() {
-        print(travelImazineInfo)
         
-        titleLabel.title = "SeSAC TRAVEL"
+        let xib = UINib(nibName: "TravelMagazineInfo", bundle: nil)
+        tableView.register(xib, forHeaderFooterViewReuseIdentifier: "TravelMagazineInfo")
+        
         tableView.rowHeight = 435
+        titleLabel.title = "SeSAC TRAVEL"
     }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return travelImazineInfo.magazine.count
+        return travelImazineInfo.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelMagazineInfo") as! TravelMagazineInfolTableViewCell
-        let data = travelImazineInfo.magazine[indexPath.row]
+        let data = travelImazineInfo[indexPath.row]
         
         let url = URL(string: data.photo_image)
         let dateformatter = DateFormatter()
@@ -42,16 +44,16 @@ class TravelMagazineInfolTableViewController: UITableViewController {
         let formatteddate = dateformatter.string(from: date)
         
         cell.titleLabel.text = data.title
-        cell.titleLabel.font = .systemFont(ofSize: 20)
         
+        cell.subtitleLabel.text = data.subtitle
+        cell.dateLabel.text = formatteddate
+        cell.titleLabel.font = .systemFont(ofSize: 20)
         cell.titleLabel.lineBreakMode = .byWordWrapping
         cell.titleLabel.numberOfLines = 0
         
-        cell.subtitleLabel.text = data.subtitle
         cell.subtitleLabel.font = .systemFont(ofSize: 14)
         cell.subtitleLabel.textColor = .systemGray3
         
-        cell.dateLabel.text = formatteddate
         cell.dateLabel.textAlignment = .right
         cell.dateLabel.font = .systemFont(ofSize: 14)
         cell.dateLabel.textColor = .systemGray3

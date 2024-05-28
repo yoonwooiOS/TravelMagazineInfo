@@ -7,12 +7,12 @@
 
 import UIKit
 extension UILabel {
-    func titlePrimaryLabel(textColor color:UIColor, fontSize size:Int) {
+    
+    func titlePrimaryLabel(textAlignment:NSTextAlignment,   fontSize size:Int,textColor color:UIColor) {
         
         self.font = .boldSystemFont(ofSize: CGFloat(size))
-        self.textAlignment = .left
+        self.textAlignment = textAlignment
         self.textColor = color
-        self.layer.borderColor = UIColor.black.cgColor
         self.numberOfLines = 0
         
         

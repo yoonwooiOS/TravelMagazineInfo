@@ -22,5 +22,11 @@ class RestaurantCustomCellTableViewCell:
     
     @IBOutlet var restaurantCategoryLabel: UILabel!
     
-
+    override class func awakeFromNib() {
+        
+        
+        
+        
+        
+    }
 }

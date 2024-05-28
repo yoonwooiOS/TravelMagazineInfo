@@ -29,8 +29,11 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.rowHeight = 150
+        let xib = UINib(nibName: "RestaurantTableViewCell", bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: "RestaurantTableViewCell")
+        
         restaurantSearchTextField.placeholder = "원하시는 식당을 입력해주세요!"
         
         buttonUiDesign(buttonName: restaurantSearchButton, buttonTitle: "검색", buttonTextColor: .white, buttonBackGroundColor: .systemBlue, titleLabelAlignment: .center)
@@ -153,7 +156,7 @@ class RestaurantTableViewController: UITableViewController {
         
     }
     
-    
+      
     @IBAction func chineseFoodButtonClicked(_ sender: UIButton) {
         
         var chineseFood:[Restaurant] = []
