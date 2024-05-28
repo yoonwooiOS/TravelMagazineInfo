@@ -30,8 +30,9 @@ class TravelMagazineInfolTableViewController: UITableViewController {
         let data = travelImazineInfo[indexPath.row]
         
         cell.titleLabel.titlePrimaryLabel(textAlignment: .left, fontSize: 20, textColor: .black)
-        cell.subtitleLabel.subtitlePrimaryLabel(textAlignment: .right, fontSize: 14, textColor: .systemGray3)
-        cell.dateLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .systemGray3)
+        cell.subtitleLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .systemGray3)
+        cell.dateLabel.subtitlePrimaryLabel(textAlignment: .right, fontSize: 14, textColor: .systemGray3)
+        cell.configureCell(data: data)
         
         return cell
     }

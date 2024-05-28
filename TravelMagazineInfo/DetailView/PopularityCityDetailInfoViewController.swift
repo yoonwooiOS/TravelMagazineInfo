@@ -45,7 +45,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
         if data.ad {
             let adcell = tableView.dequeueReusableCell(withIdentifier: "adcell", for: indexPath) as! AdTableViewCell
             
-            adcell.configureAddCellLayout(data: data)
+            adcell.configureAdCell(data: data)
             
             return adcell
             
@@ -53,7 +53,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             
             let infocell = tableView.dequeueReusableCell(withIdentifier: "CitiyDetailInfo", for: indexPath) as! PopularityCitiyDetailInfoViewControllerTableViewCell
             
-            infocell.configureInfoCellLayout(data: data)
+            infocell.configureInfoCell(data: data)
 
             return infocell
             

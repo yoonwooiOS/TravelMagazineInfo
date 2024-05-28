@@ -19,9 +19,8 @@ class TravelMagazineInfolTableViewCell:
     
     @IBOutlet var dateLabel: UILabel!
     
-    override class func awakeFromNib() {
-        
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     func configureCell(data: Magazine) {
@@ -41,6 +40,9 @@ class TravelMagazineInfolTableViewCell:
         
         let url = URL(string: data.photo_image)
         travelImage.kf.setImage(with:url)
+        travelImage.contentMode = .scaleAspectFill
+        travelImage.layer.cornerRadius = 10
+        travelImage.clipsToBounds = true
         
     }
     

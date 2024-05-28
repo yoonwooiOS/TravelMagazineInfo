@@ -106,7 +106,6 @@
         <!--Travel Magazine Info View Controller-->
         <scene sceneID="eQp-N4-H8z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GpD-H5-qrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="d4U-qg-14j" customClass="TravelMagazineInfoViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Biy-zQ-KC8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -131,6 +130,7 @@
                         <outlet property="tableView" destination="0lw-1d-6ff" id="xmf-SF-1ZY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GpD-H5-qrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4707.6335877862593" y="-187.32394366197184"/>
         </scene>
@@ -502,7 +502,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Iz3-g9-pyc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YJp-jI-2ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q15-9D-Gaf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wBo-dN-IGd">
@@ -514,6 +513,7 @@
                         <segue destination="d4U-qg-14j" kind="relationship" relationship="rootViewController" id="QHJ-je-ZZK"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJp-jI-2ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3779.3893129770991" y="-187.32394366197184"/>
         </scene>

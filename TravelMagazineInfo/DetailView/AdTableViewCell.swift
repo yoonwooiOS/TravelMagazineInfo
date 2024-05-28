@@ -20,7 +20,7 @@ class AdTableViewCell: UITableViewCell {
        
     }
     
-    func configureAddCellLayout(data:Travel) {
+    func configureAdCell(data:Travel) {
         adTitleLabel.text = data.title
         adLabel.text = " ad "
         adLabel.backgroundColor = .white

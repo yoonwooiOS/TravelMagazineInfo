@@ -20,6 +20,7 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        
         citiyDetailTitleLabel.font = .boldSystemFont(ofSize: 18)
         citiyDetailDescriptionLabel.numberOfLines = 0
         citiyDetailDescriptionLabel.font = .systemFont(ofSize: 14)
@@ -27,12 +28,11 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         likeButton.tintColor = .white
     }
     
-    func configureInfoCellLayout(data: Travel) {
-        
+    func configureInfoCell(data: Travel) {
         guard let urlstring = data.travel_image, let url = URL(string: urlstring), let grade = data.grade, let save = data.save, let like = data.like else {
             print("값 없음")
             return}
-        
+    
         citiyDetailImageView.kf.setImage(with: url)
         citiyDetailImageView.contentMode = .scaleAspectFill
         citiyDetailImageView?.layer.cornerRadius = 10
@@ -42,10 +42,7 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         citiyDetailDescriptionLabel.text = data.description
         
         citiyDetailGradeSaveBookmarkLabel.text = "평점별자리(\(grade)) · 저장 \(save)"
-        
         likeButton.setImage(UIImage(systemName: like ? "heart.fill" : "heart"), for: .normal)
-        
-        
     }
     
 }
