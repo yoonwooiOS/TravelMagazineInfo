@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUH-Bh-FLL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BBN-OZ-FzS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oek-T6-JcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616" y="792"/>
+            <point key="canvasLocation" x="1340" y="462"/>
         </scene>
         <!--Travel Magazine Info View Controller-->
         <scene sceneID="eQp-N4-H8z">
@@ -132,7 +132,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpD-H5-qrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4707.6335877862593" y="-187.32394366197184"/>
+            <point key="canvasLocation" x="3361" y="486"/>
+        </scene>
+        <!--Popular City View Controller-->
+        <scene sceneID="HkO-ad-s27">
+            <objects>
+                <viewController id="BBN-OZ-FzS" customClass="PopularCityViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T1C-h9-ciZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pFJ-ua-ZIG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BBN-OZ-FzS" id="CoN-A9-KkF"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-tk-GGz">
+                                <rect key="frame" x="30" y="119" width="333" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="040-UY-wod">
+                                <rect key="frame" x="0.0" y="166" width="393" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eQ8-E3-dgf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pFJ-ua-ZIG" firstAttribute="trailing" secondItem="eQ8-E3-dgf" secondAttribute="trailing" id="8j7-du-V3x"/>
+                            <constraint firstItem="040-UY-wod" firstAttribute="leading" secondItem="eQ8-E3-dgf" secondAttribute="leading" id="Bug-oc-toK"/>
+                            <constraint firstItem="pFJ-ua-ZIG" firstAttribute="leading" secondItem="eQ8-E3-dgf" secondAttribute="leading" id="OAu-Fh-P74"/>
+                            <constraint firstItem="RR3-tk-GGz" firstAttribute="top" secondItem="pFJ-ua-ZIG" secondAttribute="bottom" constant="4" id="WSf-VN-WrA"/>
+                            <constraint firstItem="eQ8-E3-dgf" firstAttribute="trailing" secondItem="040-UY-wod" secondAttribute="trailing" id="gTM-2Z-3GG"/>
+                            <constraint firstItem="pFJ-ua-ZIG" firstAttribute="top" secondItem="eQ8-E3-dgf" secondAttribute="top" id="hNJ-qi-i88"/>
+                            <constraint firstItem="RR3-tk-GGz" firstAttribute="leading" secondItem="eQ8-E3-dgf" secondAttribute="leading" constant="30" id="jow-IK-zHh"/>
+                            <constraint firstItem="eQ8-E3-dgf" firstAttribute="trailing" secondItem="RR3-tk-GGz" secondAttribute="trailing" constant="30" id="kZv-ch-iVQ"/>
+                            <constraint firstItem="eQ8-E3-dgf" firstAttribute="bottom" secondItem="040-UY-wod" secondAttribute="bottom" id="o7h-4P-GvP"/>
+                            <constraint firstItem="040-UY-wod" firstAttribute="top" secondItem="RR3-tk-GGz" secondAttribute="bottom" constant="16" id="vPk-fh-7QQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="pFJ-ua-ZIG" id="vgo-ws-7Uq"/>
+                        <outlet property="tableView" destination="040-UY-wod" id="UhV-gO-6Jf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yY-3S-6lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5519.8473282442746" y="495.77464788732397"/>
         </scene>
         <!--Popularity City Detail Info View Controller-->
         <scene sceneID="IrV-Ap-0qd">
@@ -164,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQi-r7-gOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3780.9160305343512" y="661.97183098591552"/>
+            <point key="canvasLocation" x="1340" y="1227"/>
         </scene>
         <!--Travel Check View Controller-->
         <scene sceneID="hGE-Vy-Gsa">
@@ -175,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-5y-OED">
-                                <rect key="frame" x="176" y="416" width="41.333333333333343" height="20.333333333333314"/>
+                                <rect key="frame" x="176" y="416" width="41" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLQ-mU-5tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5634.3511450381675" y="661.97183098591552"/>
+            <point key="canvasLocation" x="2404" y="1202"/>
         </scene>
         <!--Ad Check View Controller-->
         <scene sceneID="27i-wg-PwH">
@@ -226,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZf-tM-fFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5634" y="1377"/>
+            <point key="canvasLocation" x="2404" y="1931"/>
         </scene>
         <!--Restaurant Table View Controller-->
         <scene sceneID="vXs-U1-ubc">
@@ -456,7 +508,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gy-Is-eS6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1541" y="794"/>
+            <point key="canvasLocation" x="419" y="462"/>
         </scene>
         <!--Rest Info View Controller-->
         <scene sceneID="yoD-w5-fBT">
@@ -523,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woJ-03-CaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.03053435114504" y="-619.0140845070423"/>
+            <point key="canvasLocation" x="-1431" y="-646"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="htB-lP-T9A">
@@ -559,7 +611,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIR-Mj-CoA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854.1984732824426" y="661.97183098591552"/>
+            <point key="canvasLocation" x="418" y="1227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iz3-g9-pyc">
@@ -577,7 +629,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJp-jI-2ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3779.3893129770991" y="-187.32394366197184"/>
+            <point key="canvasLocation" x="2405" y="462"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IvN-d3-Xmb">
@@ -595,7 +647,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4a-BX-LZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-510.68702290076334" y="-619.0140845070423"/>
+            <point key="canvasLocation" x="-2358" y="-663"/>
         </scene>
     </scenes>
     <resources>
