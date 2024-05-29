@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="081-Hg-Wm6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUH-Bh-FLL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -474,7 +474,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="KxJ-zb-oT7" id="Rr0-1W-rw1"/>
+                                    <outlet property="delegate" destination="KxJ-zb-oT7" id="EVp-jY-OaO"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWK-vO-HpK">
@@ -516,7 +516,7 @@
                     <connections>
                         <outlet property="costEffectivenessButton" destination="hFk-lG-AgC" id="6C0-AS-mUX"/>
                         <outlet property="navigationTitle" destination="4Cl-oh-Rj0" id="4EC-UN-91n"/>
-                        <outlet property="searchBar" destination="HJC-HO-TZq" id="9cz-ZY-G7b"/>
+                        <outlet property="searchBar" destination="HJC-HO-TZq" id="QsQ-fB-l5G"/>
                         <outlet property="tableView" destination="dWN-dt-FC2" id="92v-Wz-3kf"/>
                         <outlet property="todayRecommandButton" destination="tWK-vO-HpK" id="NT2-Cr-ecS"/>
                     </connections>

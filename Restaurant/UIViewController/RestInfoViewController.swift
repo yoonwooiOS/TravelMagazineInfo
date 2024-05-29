@@ -9,9 +9,11 @@ import UIKit
 import Kingfisher
 
 class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-   
+    
     @IBOutlet var navigationTitle: UINavigationItem!
     
+    
+   
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var tableView: UITableView!
@@ -54,7 +56,7 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         return cell
     }
-
+    
     func configureTableView() {
         tableView.rowHeight = 160
         tableView.delegate = self
@@ -70,7 +72,33 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         name.backgroundColor = bgcolor
         name.layer.cornerRadius = 10
     }
-
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        var searchList:[Restaurant] = []
+        print(#function)
+        for menu in resList {
+            if menu.name.contains(searchBar.text!) || menu.category.contains(searchBar.text!) {
+                
+                searchList.append(menu)
+            }
+        }
+        filteredList = searchList
+        tableView.reloadData()
+    }
+    //    searchbar
+    
+    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    //        var searchList:[Restaurant] = []
+    //        print(#function)
+    //        for menu in resList {
+    //            if menu.name.contains(searchBar.text!) || menu.category.contains(searchBar.text!) {
+    //                
+    //                searchList.append(menu)
+    //            }
+    //        }
+    //        filteredList = searchList
+    //        tableView.reloadData()
+    //    }
+    
     @objc func koreanFoodButtonClicked() {
         var koreaFood:[Restaurant] = []
         
@@ -101,9 +129,9 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
     }
     
     @IBAction func costEffectivenessButtonClicked(_ sender: UIButton) {
-    var costEffectivenessList:[Restaurant] = []
+        var costEffectivenessList:[Restaurant] = []
         for food in resList {
-           if food.price < 10000 {
+            if food.price < 10000 {
                 costEffectivenessList.append(food)
             }
             filteredList = costEffectivenessList
