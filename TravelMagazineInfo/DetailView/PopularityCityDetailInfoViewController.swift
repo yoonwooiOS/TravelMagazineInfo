@@ -15,13 +15,11 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
     @IBOutlet var cityDetailInfoTableView: UITableView!
     
     var citiyInfoList:[Travel] = TravelInfo().travel
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         configureTalbeView()
-        
         
     }
     
@@ -44,14 +42,44 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             let infocell = tableView.dequeueReusableCell(withIdentifier: "CitiyDetailInfo", for: indexPath) as! PopularityCitiyDetailInfoViewControllerTableViewCell
             
             infocell.configureInfoCell(data: data)
-
+            
+            
             return infocell
             
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = citiyInfoList[indexPath.row]
+        
+        if data.ad {
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AdCheckViewController") as! AdCheckViewController
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            vc.receiveTitleData = data.title
+            present(nav, animated: true)
+            
+            
+        } else {
+
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TravelCheckViewController") as! TravelCheckViewController
+            vc.titlelabel = data.title
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
     func configureTalbeView() {
         
         navigationTitleLabel.title = "도시 상세 정보"
+        
+        navigationItem.backBarButtonItem?.tintColor = .black
+        let blackBackButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        blackBackButton.tintColor = .black
+        navigationItem.backBarButtonItem = blackBackButton
+    
         
         cityDetailInfoTableView.rowHeight = 130
         cityDetailInfoTableView.delegate = self
@@ -65,6 +93,8 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
         
         
     }
+    
+    
     
 }
 

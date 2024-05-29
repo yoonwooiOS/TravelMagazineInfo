@@ -166,6 +166,68 @@
             </objects>
             <point key="canvasLocation" x="3780.9160305343512" y="661.97183098591552"/>
         </scene>
+        <!--Travel Check View Controller-->
+        <scene sceneID="hGE-Vy-Gsa">
+            <objects>
+                <viewController storyboardIdentifier="TravelCheckViewController" id="OCh-64-TFL" customClass="TravelCheckViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YjE-oH-dRK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-5y-OED">
+                                <rect key="frame" x="176" y="416" width="41.333333333333343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CEs-2E-Kv3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XCW-5y-OED" firstAttribute="centerX" secondItem="YjE-oH-dRK" secondAttribute="centerX" id="01n-21-xbc"/>
+                            <constraint firstItem="XCW-5y-OED" firstAttribute="centerY" secondItem="YjE-oH-dRK" secondAttribute="centerY" id="X81-He-gVI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="czu-TK-KPj"/>
+                    <connections>
+                        <outlet property="travelTitleLabel" destination="XCW-5y-OED" id="87n-T5-RFY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLQ-mU-5tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5634.3511450381675" y="661.97183098591552"/>
+        </scene>
+        <!--Ad Check View Controller-->
+        <scene sceneID="27i-wg-PwH">
+            <objects>
+                <viewController storyboardIdentifier="AdCheckViewController" id="PC7-6f-QV3" customClass="AdCheckViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2MH-ge-3Vj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq6-0w-aCl">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XVs-ck-k0d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iq6-0w-aCl" firstAttribute="centerY" secondItem="2MH-ge-3Vj" secondAttribute="centerY" id="Sck-W2-Gvp"/>
+                            <constraint firstItem="iq6-0w-aCl" firstAttribute="centerX" secondItem="2MH-ge-3Vj" secondAttribute="centerX" id="bqi-bQ-yoe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="55V-hc-iGb"/>
+                    <connections>
+                        <outlet property="receiveTitleLabel" destination="iq6-0w-aCl" id="xze-au-wTr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZf-tM-fFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5634" y="1377"/>
+        </scene>
         <!--Restaurant Table View Controller-->
         <scene sceneID="vXs-U1-ubc">
             <objects>
