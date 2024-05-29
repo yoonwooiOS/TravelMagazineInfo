@@ -84,21 +84,7 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         filteredList = searchList
         tableView.reloadData()
     }
-    //    searchbar
-    
-    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    //        var searchList:[Restaurant] = []
-    //        print(#function)
-    //        for menu in resList {
-    //            if menu.name.contains(searchBar.text!) || menu.category.contains(searchBar.text!) {
-    //                
-    //                searchList.append(menu)
-    //            }
-    //        }
-    //        filteredList = searchList
-    //        tableView.reloadData()
-    //    }
-    
+   
     @objc func koreanFoodButtonClicked() {
         var koreaFood:[Restaurant] = []
         
