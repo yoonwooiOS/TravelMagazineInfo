@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99043DDE2C08A4BF0075F5B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DDD2C08A4BF0075F5B6 /* MapViewController.swift */; };
 		9985849A2C01D8020008F7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998584992C01D8020008F7FE /* AppDelegate.swift */; };
 		9985849C2C01D8020008F7FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985849B2C01D8020008F7FE /* SceneDelegate.swift */; };
 		9985849E2C01D8020008F7FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985849D2C01D8020008F7FE /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99043DDD2C08A4BF0075F5B6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		998584962C01D8020008F7FE /* TravelMagazineInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMagazineInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		998584992C01D8020008F7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9985849B2C01D8020008F7FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +89,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99043DDC2C08A4B20075F5B6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				99043DDD2C08A4BF0075F5B6 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		9985848D2C01D8020008F7FE = {
 			isa = PBXGroup;
 			children = (
+				9985849F2C01D8020008F7FE /* Main.storyboard */,
+				998584A22C01D8030008F7FE /* Assets.xcassets */,
 				998585602C071D280008F7FE /* Model */,
 				998584AD2C01D81D0008F7FE /* Restaurant */,
 				998584982C01D8020008F7FE /* TravelMagazineInfo */,
@@ -115,8 +127,6 @@
 				998585612C074DDF0008F7FE /* PopularCity */,
 				9985849B2C01D8020008F7FE /* SceneDelegate.swift */,
 				9985849D2C01D8020008F7FE /* ViewController.swift */,
-				9985849F2C01D8020008F7FE /* Main.storyboard */,
-				998584A22C01D8030008F7FE /* Assets.xcassets */,
 				998584A42C01D8030008F7FE /* LaunchScreen.storyboard */,
 				998584A72C01D8030008F7FE /* Info.plist */,
 			);
@@ -126,7 +136,7 @@
 		998584AD2C01D81D0008F7FE /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				998584B02C01D9870008F7FE /* Restaurant.swift */,
+				99043DDC2C08A4B20075F5B6 /* Map */,
 				998584DD2C04DA7A0008F7FE /* TableViewController */,
 				998584DC2C04DA6E0008F7FE /* UIViewController */,
 			);
@@ -215,6 +225,7 @@
 				9985856A2C0754370008F7FE /* CityInfo.swift */,
 				998584B42C03427A0008F7FE /* MagazineInfo.swift */,
 				998584D02C04669B0008F7FE /* TravelModel.swift */,
+				998584B02C01D9870008F7FE /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 				998584E72C04F7E80008F7FE /* TitleLabelExtension.swift in Sources */,
 				9985849A2C01D8020008F7FE /* AppDelegate.swift in Sources */,
 				998584AF2C01D91C0008F7FE /* RestaurantTableViewController.swift in Sources */,
+				99043DDE2C08A4BF0075F5B6 /* MapViewController.swift in Sources */,
 				998584B52C03427A0008F7FE /* MagazineInfo.swift in Sources */,
 				9985849C2C01D8020008F7FE /* SceneDelegate.swift in Sources */,
 				998585532C06054C0008F7FE /* RestInfoTableViewCell.swift in Sources */,

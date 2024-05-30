@@ -13,7 +13,6 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
     @IBOutlet var navigationTitle: UINavigationItem!
     
     
-   
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var tableView: UITableView!
@@ -37,6 +36,10 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         navigationItem.leftBarButtonItem = left
         navigationItem.rightBarButtonItem = all
+        
+        let map = UIBarButtonItem(image:.init(systemName: "map.fill") , style: .plain, target: self, action: #selector(mapkitClicked))
+        navigationItem.rightBarButtonItem = map
+        
         
         buttonUiDesign(buttonName: todayRecommandButton, buttonTitle: "오늘의 추천 식당", tintColor: .white, backgroundColor: .systemGreen)
         buttonUiDesign(buttonName: costEffectivenessButton, buttonTitle: "가성비 맛집", tintColor: .white, backgroundColor: .systemBlue)
@@ -125,5 +128,14 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
             
         }
     }
+    
+    @objc func mapkitClicked(){
+          
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+          
+        navigationController?.pushViewController(vc, animated: true)
+          
+          
+      }
     
 }

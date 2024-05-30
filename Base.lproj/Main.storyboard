@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BBN-OZ-FzS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUH-Bh-FLL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -119,9 +120,9 @@
                         <viewLayoutGuide key="safeArea" id="pvM-Pd-FuW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0lw-1d-6ff" firstAttribute="top" secondItem="pvM-Pd-FuW" secondAttribute="top" id="SVN-Oq-zzt"/>
                             <constraint firstItem="pvM-Pd-FuW" firstAttribute="bottom" secondItem="0lw-1d-6ff" secondAttribute="bottom" id="aN1-SU-CKi"/>
                             <constraint firstItem="0lw-1d-6ff" firstAttribute="leading" secondItem="pvM-Pd-FuW" secondAttribute="leading" id="mYK-O2-Q5U"/>
+                            <constraint firstItem="0lw-1d-6ff" firstAttribute="top" secondItem="pvM-Pd-FuW" secondAttribute="top" id="uDn-Bz-ISt"/>
                             <constraint firstItem="pvM-Pd-FuW" firstAttribute="trailing" secondItem="0lw-1d-6ff" secondAttribute="trailing" id="zRU-cR-IWz"/>
                         </constraints>
                     </view>
@@ -611,6 +612,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woJ-03-CaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1431" y="-646"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="2WY-Rm-bfv">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Bk0-iZ-pfg" customClass="MapViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQo-LP-yar">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLQ-2l-o6b">
+                                <rect key="frame" x="0.0" y="106" width="393" height="712"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OMa-e3-wUd">
+                                <rect key="frame" x="0.0" y="59" width="393" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eCp-Wm-LrP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OMa-e3-wUd" firstAttribute="top" secondItem="eCp-Wm-LrP" secondAttribute="top" id="1v5-k0-Zuc"/>
+                            <constraint firstItem="eCp-Wm-LrP" firstAttribute="trailing" secondItem="OMa-e3-wUd" secondAttribute="trailing" id="2lR-0b-b4q"/>
+                            <constraint firstItem="eCp-Wm-LrP" firstAttribute="trailing" secondItem="JLQ-2l-o6b" secondAttribute="trailing" id="3L4-CY-t0m"/>
+                            <constraint firstItem="JLQ-2l-o6b" firstAttribute="leading" secondItem="eCp-Wm-LrP" secondAttribute="leading" id="TrX-WF-aSG"/>
+                            <constraint firstItem="JLQ-2l-o6b" firstAttribute="top" secondItem="OMa-e3-wUd" secondAttribute="bottom" constant="16" id="WUc-TR-IDw"/>
+                            <constraint firstItem="JLQ-2l-o6b" firstAttribute="bottom" secondItem="eCp-Wm-LrP" secondAttribute="bottom" id="qiJ-7R-bkt"/>
+                            <constraint firstItem="OMa-e3-wUd" firstAttribute="leading" secondItem="eCp-Wm-LrP" secondAttribute="leading" id="whS-EO-Xdg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="JLQ-2l-o6b" id="Fjr-0c-BDa"/>
+                        <outlet property="segmentedControl" destination="OMa-e3-wUd" id="CIU-o2-KQK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpL-uS-pcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430" y="-636"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="htB-lP-T9A">
