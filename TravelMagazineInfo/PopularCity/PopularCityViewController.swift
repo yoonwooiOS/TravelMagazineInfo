@@ -9,6 +9,7 @@ import UIKit
 
 class PopularCityViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
+    @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var tableView: UITableView!
@@ -18,8 +19,20 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureSegmentedControl()
         
-
+    }
+    
+    
+    func configureSegmentedControl(){
+        
+        segmentedControl.selectedSegmentIndex = 3
+        segmentedControl.setTitle("모두", forSegmentAt: 0)
+        segmentedControl.setTitle("국내", forSegmentAt: 1)
+        segmentedControl.setTitle("해외", forSegmentAt: 2)
+        
+        
+        
     }
     func configureTableView() {
         

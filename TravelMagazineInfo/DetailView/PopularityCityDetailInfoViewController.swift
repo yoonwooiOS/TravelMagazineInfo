@@ -64,7 +64,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
         } else {
 
             let vc = storyboard?.instantiateViewController(withIdentifier: "TravelCheckViewController") as! TravelCheckViewController
-            vc.titlelabel = data.title
+            vc.data = data
             navigationController?.pushViewController(vc, animated: true)
             
         }

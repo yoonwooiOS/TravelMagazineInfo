@@ -15,6 +15,12 @@ struct Travel {
     let like:Bool?
     let ad:Bool
     
+    var saveGrade:String {
+        guard let grade = grade, let save = save else { return "" }
+        
+        
+        return "평점 \(grade) 점, \(save) 저장"
+    }
     
 }
 

@@ -32,7 +32,7 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         guard let urlstring = data.travel_image, let url = URL(string: urlstring), let grade = data.grade, let save = data.save, let like = data.like else {
             print("값 없음")
             return}
-    
+        
         citiyDetailImageView.kf.setImage(with: url)
         citiyDetailImageView.contentMode = .scaleAspectFill
         citiyDetailImageView?.layer.cornerRadius = 10
