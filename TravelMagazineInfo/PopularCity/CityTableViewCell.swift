@@ -21,17 +21,18 @@ class CityTableViewCell: UITableViewCell {
         
         configureLayOut()
         
+    }
+    
+    func configureLayOut() {
+        
         cityNameLabel.titlePrimaryLabel(textAlignment: .right, fontSize: 20, textColor: .white)
         cityExplain.subtitlePrimaryLabel(textAlignment: .left, fontSize: 16, textColor: .white)
         cityExplain.backgroundColor = .black
         cityExplain.layer.opacity = 0.55
     }
-    func configureLayOut() {
-        
-        
-        
-        
-    }
+    
+    
+    
     func configureCell(data: City) {
         
         
