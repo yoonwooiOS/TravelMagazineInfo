@@ -45,21 +45,21 @@ class TravelMagazineInfoTableViewCell: UITableViewCell {
         dataFomatter(data: data)
     }
     
-    @discardableResult
-    func dataFomatter(data: Magazine) -> String {
+    
+    func dataFomatter(data: Magazine) {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyMMdd"
         
         guard let date = dateformatter.date(from: data.date) else {
             dateLabel.text = data.date
-            return "변한된 값이 없습니다"  }
+            return   }
         
         dateformatter.dateFormat = "yy년MM월dd일"
         let formatteddate = dateformatter.string(from: date)
         dateLabel.text = formatteddate
         dateLabel.subtitlePrimaryLabel(textAlignment: .right, fontSize: 14, textColor: .systemGray2)
         
-      return formatteddate
+     
     }
    
     
