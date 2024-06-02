@@ -16,7 +16,15 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     
     let cityList:[City] = CityInfo().city
-    var filteredList:[City] = []
+    var filteredList:[City] = [] {
+        
+        didSet {
+            
+            tableView.reloadData()
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,26 +98,7 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             }
             filteredList = locationList
         }
-        //        for city in CityInfo().city {
-        //
-        //            if city.domestic_travel {
-        //                domesticList.append(city)
-        ////                print(domesticList ,"국내")
-        //            } else  {
-        //                overseasList.append(city)
-        ////                print(overseasList ,"해외")
-        //            }
-        //        }
-        //        if segmentedControl.selectedSegmentIndex == 0 {
-        //            filteredList = cityList
-        //        } else if segmentedControl.selectedSegmentIndex == 1 {
-        //            filteredList = domesticList
-        //            print(filteredList,"1번 세그를 눌렀을 때 도시들")
-        //        } else  {
-        //            filteredList = overseasList
-        //        }
-        
-        tableView.reloadData()
+    
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

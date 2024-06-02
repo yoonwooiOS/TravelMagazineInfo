@@ -41,27 +41,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYK-eZ-vmq">
-                        <rect key="frame" x="370" y="4" width="50" height="50"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFg-Ou-WEH">
+                        <rect key="frame" x="404" y="-4" width="24" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="rYK-eZ-vmq" secondAttribute="height" id="MQ9-10-xp1"/>
-                            <constraint firstAttribute="width" constant="50" id="Ojy-yj-N6N"/>
+                            <constraint firstAttribute="width" secondItem="gFg-Ou-WEH" secondAttribute="height" multiplier="1:1" id="oCo-A2-qEO"/>
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title=""/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="rYK-eZ-vmq" firstAttribute="top" secondItem="C2U-XF-1iP" secondAttribute="top" placeholder="YES" id="0ob-ti-hsd"/>
+                    <constraint firstItem="C2U-XF-1iP" firstAttribute="trailing" secondItem="gFg-Ou-WEH" secondAttribute="trailing" constant="-8" id="3Xb-eu-LLo"/>
                     <constraint firstItem="dUu-SL-lDx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7nG-Kt-Ezz"/>
                     <constraint firstItem="C2U-XF-1iP" firstAttribute="leading" secondItem="spA-AV-GO0" secondAttribute="trailing" constant="8" id="8MN-g6-VK5"/>
-                    <constraint firstItem="C2U-XF-1iP" firstAttribute="trailing" secondItem="rYK-eZ-vmq" secondAttribute="trailing" id="Bbr-zy-RiE"/>
                     <constraint firstItem="spA-AV-GO0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="DmA-uS-F0l"/>
                     <constraint firstItem="spA-AV-GO0" firstAttribute="top" secondItem="dUu-SL-lDx" secondAttribute="bottom" constant="4" id="Feg-tj-ZwW"/>
                     <constraint firstAttribute="trailing" secondItem="C2U-XF-1iP" secondAttribute="trailing" constant="8" id="KVt-jW-8rZ"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PSG-5U-hHG" secondAttribute="bottom" constant="4" id="LDW-J6-OUd"/>
                     <constraint firstItem="C2U-XF-1iP" firstAttribute="leading" secondItem="PSG-5U-hHG" secondAttribute="trailing" constant="8" id="MkC-S3-Fy6"/>
                     <constraint firstItem="PSG-5U-hHG" firstAttribute="top" secondItem="spA-AV-GO0" secondAttribute="bottom" constant="4" id="O41-QN-7nW"/>
+                    <constraint firstItem="gFg-Ou-WEH" firstAttribute="top" secondItem="C2U-XF-1iP" secondAttribute="top" constant="-8" id="PP4-Ac-07a"/>
                     <constraint firstItem="dUu-SL-lDx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="X6a-vL-g0V"/>
                     <constraint firstItem="C2U-XF-1iP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="ZFI-NR-6Yb"/>
                     <constraint firstAttribute="bottom" secondItem="C2U-XF-1iP" secondAttribute="bottom" constant="4" id="d8W-Ti-HlG"/>
@@ -71,11 +70,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bookmarkButton" destination="gFg-Ou-WEH" id="993-vd-8eS"/>
                 <outlet property="citiyDetailDescriptionLabel" destination="spA-AV-GO0" id="fss-cw-fyB"/>
                 <outlet property="citiyDetailGradeSaveBookmarkLabel" destination="PSG-5U-hHG" id="APa-vc-Wdj"/>
                 <outlet property="citiyDetailImageView" destination="C2U-XF-1iP" id="20j-2H-IQN"/>
                 <outlet property="citiyDetailTitleLabel" destination="dUu-SL-lDx" id="g6E-J2-Jda"/>
-                <outlet property="likeButton" destination="rYK-eZ-vmq" id="cmQ-1T-gX9"/>
             </connections>
             <point key="canvasLocation" x="221.37404580152671" y="55.281690140845072"/>
         </tableViewCell>

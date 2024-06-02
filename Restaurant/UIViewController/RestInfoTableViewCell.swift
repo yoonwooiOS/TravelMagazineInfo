@@ -35,17 +35,18 @@ class RestInfoTableViewCell: UITableViewCell {
         resNameLabel.titlePrimaryLabel(textAlignment: .left, fontSize: 20, textColor: .black)
         
         resAddressLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .systemGray)
+        
         restPriceLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .black)
+        
         resPhoneNumberLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .black)
         
     }
     
     func configureCell(data: Restaurant) {
         
-        let urlString = URL(string: data.image)
         
-        resImageView.kf.setImage(with: urlString)
-        resImageView.layer.cornerRadius = 10
+        resImageView.primaryImageView(urlString: data.image, contendMode: .scaleToFill, cornerRadius: 10)
+       
         
         resNameLabel.text = data.name
         

@@ -16,6 +16,8 @@ class CityTableViewCell: UITableViewCell {
     
     @IBOutlet var cityExplain: UILabel!
     
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

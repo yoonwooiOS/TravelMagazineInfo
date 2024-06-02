@@ -15,7 +15,7 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
     @IBOutlet var citiyDetailDescriptionLabel: UILabel!
     @IBOutlet var citiyDetailGradeSaveBookmarkLabel: UILabel!
     
-    @IBOutlet var likeButton: UIButton!
+    @IBOutlet var bookmarkButton: UIButton!
     
     override func awakeFromNib() {
         
@@ -24,14 +24,13 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         citiyDetailTitleLabel.titlePrimaryLabel(textAlignment: .left, fontSize: 18, textColor: .black)
         citiyDetailDescriptionLabel.subtitlePrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .gray)
         
-//
-        likeButton.tintColor = .white
     }
     
     func configureInfoCell(data: Travel) {
         guard let urlstring = data.travel_image, let url = URL(string: urlstring), let grade = data.grade, let save = data.save, let like = data.like else {
             print("값 없음")
-            return}
+            return }
+        
         
         citiyDetailImageView.kf.setImage(with: url)
         citiyDetailImageView.contentMode = .scaleAspectFill
@@ -42,7 +41,12 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         citiyDetailDescriptionLabel.text = data.description
         
         citiyDetailGradeSaveBookmarkLabel.text = "평점별자리(\(grade)) · 저장 \(save)"
-        likeButton.setImage(UIImage(systemName: like ? "heart.fill" : "heart"), for: .normal)
+        
+        let systemImage = like ? "heart.fill" : "heart"
+        
+        bookmarkButton.primaryButton(imageName: systemImage, imageTitle: "", backgroundColor: .clear, tintColor: .systemPink)
+        
+        
     }
     
 }

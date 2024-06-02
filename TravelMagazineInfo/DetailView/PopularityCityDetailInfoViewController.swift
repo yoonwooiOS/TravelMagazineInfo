@@ -14,7 +14,14 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
     
     @IBOutlet var cityDetailInfoTableView: UITableView!
     
-    var citiyInfoList:[Travel] = TravelInfo().travel
+    var citiyInfoList:[Travel] = TravelInfo().travel {
+        
+        didSet {
+            
+            cityDetailInfoTableView.reloadData()
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return citiyInfoList.count
     }
     
@@ -31,6 +39,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
         
         let data = citiyInfoList[indexPath.row]
         if data.ad {
+            
             let adcell = tableView.dequeueReusableCell(withIdentifier: "adcell", for: indexPath) as! AdTableViewCell
             
             adcell.configureAdCell(data: data)
@@ -43,9 +52,10 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             
             infocell.configureInfoCell(data: data)
             
+            infocell.bookmarkButton.tag = indexPath.row
+            infocell.bookmarkButton.addTarget(self, action: #selector(bookmarkButton), for: .touchUpInside)
             
             return infocell
-            
         }
     }
     
@@ -60,7 +70,6 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             vc.receiveTitleData = data.title
             present(nav, animated: true)
             
-            
         } else {
 
             let vc = storyboard?.instantiateViewController(withIdentifier: "TravelCheckViewController") as! TravelCheckViewController
@@ -68,7 +77,6 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             navigationController?.pushViewController(vc, animated: true)
             
         }
-        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
     func configureTalbeView() {
@@ -92,9 +100,16 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
         cityDetailInfoTableView.register(xibAd, forCellReuseIdentifier: "adcell")
         
         
+        
     }
     
-    
+    @objc func bookmarkButton(_ sender:UIButton) {
+        
+        let index = sender.tag
+        
+        citiyInfoList[index].like?.toggle()
+        
+    }
     
 }
 
