@@ -46,7 +46,6 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         
         bookmarkButton.primaryButton(imageName: systemImage, imageTitle: "", backgroundColor: .clear, tintColor: .systemPink)
         
-        
     }
     
 }
