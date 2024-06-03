@@ -44,7 +44,7 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
         
         let systemImage = like ? "heart.fill" : "heart"
         
-        bookmarkButton.primaryButton(imageName: systemImage, imageTitle: "", backgroundColor: .clear, tintColor: .systemPink)
+        bookmarkButton.primaryButton(imageName: systemImage, imageTitle: "", backgroundColor: .clear, tintColor: .systemPink, cornerRaius: .zero)
         
     }
     

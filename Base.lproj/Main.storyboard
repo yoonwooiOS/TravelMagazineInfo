@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="081-Hg-Wm6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hkk-UW-0nm">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Travel Magazine Infol Table View Controller-->
+        <!--Item-->
         <scene sceneID="h0l-JT-Gxl">
             <objects>
                 <tableViewController id="Sub-Yv-FPT" customClass="TravelMagazineInfolTableViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,6 +95,7 @@
                             <outlet property="delegate" destination="Sub-Yv-FPT" id="Mhi-jP-qlZ"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="D56-6O-bik"/>
                     <navigationItem key="navigationItem" id="7N5-8g-50B"/>
                     <connections>
                         <outlet property="titleLabel" destination="7N5-8g-50B" id="1js-gg-CEa"/>
@@ -104,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="1340" y="462"/>
         </scene>
-        <!--Travel Magazine Info View Controller-->
+        <!--Item-->
         <scene sceneID="eQp-N4-H8z">
             <objects>
                 <viewController id="d4U-qg-14j" customClass="TravelMagazineInfoViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-1d-6ff">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -126,6 +127,7 @@
                             <constraint firstItem="pvM-Pd-FuW" firstAttribute="trailing" secondItem="0lw-1d-6ff" secondAttribute="trailing" id="zRU-cR-IWz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="kmn-se-avZ"/>
                     <navigationItem key="navigationItem" id="znF-7J-PKZ"/>
                     <connections>
                         <outlet property="tableView" destination="0lw-1d-6ff" id="xmf-SF-1ZY"/>
@@ -144,14 +146,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pFJ-ua-ZIG">
-                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BBN-OZ-FzS" id="CoN-A9-KkF"/>
                                 </connections>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-tk-GGz">
-                                <rect key="frame" x="30" y="119" width="333" height="32"/>
+                                <rect key="frame" x="30" y="163" width="333" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -162,7 +164,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="040-UY-wod">
-                                <rect key="frame" x="0.0" y="166" width="393" height="652"/>
+                                <rect key="frame" x="0.0" y="210" width="393" height="559"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -181,6 +183,7 @@
                             <constraint firstItem="040-UY-wod" firstAttribute="top" secondItem="RR3-tk-GGz" secondAttribute="bottom" constant="16" id="vPk-fh-7QQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pfL-VS-W8o"/>
                     <connections>
                         <outlet property="searchBar" destination="pFJ-ua-ZIG" id="vgo-ws-7Uq"/>
                         <outlet property="segmentedControl" destination="RR3-tk-GGz" id="lnw-MG-N57"/>
@@ -189,9 +192,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yY-3S-6lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5519.8473282442746" y="495.77464788732397"/>
+            <point key="canvasLocation" x="5330.5343511450383" y="485.91549295774649"/>
         </scene>
-        <!--Popularity City Detail Info View Controller-->
+        <!--Item-->
         <scene sceneID="IrV-Ap-0qd">
             <objects>
                 <viewController id="2ky-qw-7cr" customClass="PopularityCityDetailInfoViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -213,6 +216,7 @@
                             <constraint firstItem="muH-sM-qDh" firstAttribute="trailing" secondItem="Amc-OY-kAq" secondAttribute="trailing" id="pIf-xW-Bny"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="vTT-OV-4i3"/>
                     <navigationItem key="navigationItem" id="kzq-vf-Blx"/>
                     <connections>
                         <outlet property="cityDetailInfoTableView" destination="muH-sM-qDh" id="ehX-BL-H0a"/>
@@ -546,7 +550,7 @@
             </objects>
             <point key="canvasLocation" x="419" y="462"/>
         </scene>
-        <!--Rest Info View Controller-->
+        <!--Item-->
         <scene sceneID="yoD-w5-fBT">
             <objects>
                 <viewController id="KxJ-zb-oT7" customClass="RestInfoViewController" customModule="TravelMagazineInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -600,7 +604,10 @@
                             <constraint firstItem="HJC-HO-TZq" firstAttribute="trailing" secondItem="J43-Zt-1kD" secondAttribute="trailing" id="sPQ-mK-iiU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4Cl-oh-Rj0"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="ReL-Ab-EJo"/>
+                    <navigationItem key="navigationItem" id="4Cl-oh-Rj0">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="costEffectivenessButton" destination="hFk-lG-AgC" id="6C0-AS-mUX"/>
                         <outlet property="navigationTitle" destination="4Cl-oh-Rj0" id="4EC-UN-91n"/>
@@ -610,8 +617,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woJ-03-CaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="F5D-Q6-RM1"/>
             </objects>
-            <point key="canvasLocation" x="-1431" y="-646"/>
+            <point key="canvasLocation" x="-1431.2977099236641" y="-646.47887323943667"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="2WY-Rm-bfv">
@@ -673,10 +681,31 @@
             </objects>
             <point key="canvasLocation" x="-2358" y="49"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZaM-8j-eCE">
+            <objects>
+                <tabBarController id="Hkk-UW-0nm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oVe-c1-tyX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EUH-Bh-FLL" kind="relationship" relationship="viewControllers" id="fRJ-CJ-KXa"/>
+                        <segue destination="081-Hg-Wm6" kind="relationship" relationship="viewControllers" id="1Qd-Db-S4g"/>
+                        <segue destination="Q15-9D-Gaf" kind="relationship" relationship="viewControllers" id="LKq-qP-MTf"/>
+                        <segue destination="BtY-4Z-xcD" kind="relationship" relationship="viewControllers" id="STk-Zx-YsK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQh-VM-Nu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3344" y="-349"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="nRe-zu-HAP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="081-Hg-Wm6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vgj-83-SDW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nws-so-GBa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -691,10 +720,11 @@
             </objects>
             <point key="canvasLocation" x="418" y="1227"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="Iz3-g9-pyc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q15-9D-Gaf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fqA-p9-LdT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wBo-dN-IGd">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -709,10 +739,11 @@
             </objects>
             <point key="canvasLocation" x="2405" y="462"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="IvN-d3-Xmb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EUH-Bh-FLL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="smE-fV-Z9x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pz-57-Qit">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -726,6 +757,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4a-BX-LZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2358" y="-663"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Sac-6S-yZU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BtY-4Z-xcD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="D2x-GH-EqK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sTr-Li-aOM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BBN-OZ-FzS" kind="relationship" relationship="rootViewController" id="Vod-dN-nPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNs-fz-iZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4403.8167938931292" y="485.91549295774649"/>
         </scene>
     </scenes>
     <resources>

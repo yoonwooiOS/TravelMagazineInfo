@@ -47,7 +47,6 @@ class RestInfoTableViewCell: UITableViewCell {
         
         resImageView.primaryImageView(urlString: data.image, contendMode: .scaleToFill, cornerRadius: 10)
        
-        
         resNameLabel.text = data.name
         
         resAddressLabel.text = data.address

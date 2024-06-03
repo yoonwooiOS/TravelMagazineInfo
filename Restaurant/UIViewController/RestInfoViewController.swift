@@ -10,6 +10,7 @@ import Kingfisher
 
 class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
+    
     @IBOutlet var navigationTitle: UINavigationItem!
     
     
@@ -22,27 +23,24 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
     @IBOutlet var costEffectivenessButton: UIButton!
     
     let resList:[Restaurant] = RestaurantList().restaurantArray
-    var filteredList:[Restaurant] = []
+    var filteredList:[Restaurant] = [] {
+        
+        didSet {
+            
+            tableView.reloadData()
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationTitle.title = "오늘 뭐 먹지?"
+        
         configureTableView()
+        configureBarButtonItem()
+        configureButton()
         
         filteredList = resList
-        
-        let left = UIBarButtonItem(title: "한식", style: .plain, target:self , action: #selector(koreanFoodButtonClicked))
-        let all = UIBarButtonItem(title: "전체 식당 보기", style: .plain, target: self, action: #selector(allResButtonClicked))
-        
-        navigationItem.leftBarButtonItem = left
-        navigationItem.rightBarButtonItem = all
-        
-        let map = UIBarButtonItem(image:.init(systemName: "map.fill") , style: .plain, target: self, action: #selector(mapkitClicked))
-        navigationItem.rightBarButtonItem = map
-        
-        
-        buttonUiDesign(buttonName: todayRecommandButton, buttonTitle: "오늘의 추천 식당", tintColor: .white, backgroundColor: .systemGreen)
-        buttonUiDesign(buttonName: costEffectivenessButton, buttonTitle: "가성비 맛집", tintColor: .white, backgroundColor: .systemBlue)
         
     }
     
@@ -60,6 +58,24 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func configureBarButtonItem() {
+        
+        navigationTitle.title = "오늘 뭐먹지"
+        
+        
+        let left = UIBarButtonItem(title: "한식", style: .plain, target:self , action: #selector(koreanFoodButtonClicked))
+        let all = UIBarButtonItem(title: "전체 식당 보기", style: .plain, target: self, action: #selector(allResButtonClicked))
+        
+        navigationItem.leftBarButtonItem = left
+        navigationItem.rightBarButtonItem = all
+        
+        let map = UIBarButtonItem(image:.init(systemName: "map.fill") , style: .plain, target: self, action: #selector(mapkitClicked))
+        navigationItem.rightBarButtonItem = map
+        
+        
+        
+    }
+    
     func configureTableView() {
         tableView.rowHeight = 160
         tableView.delegate = self
@@ -67,6 +83,13 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         let xib = UINib(nibName: "RestInfoTableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "RestInfoTableViewCell")
+    }
+    
+    func configureButton() {
+        
+        todayRecommandButton.primaryButton(imageName: "", imageTitle: "오늘의 추천 식당", backgroundColor: .systemGreen, tintColor: .white, cornerRaius: 10)
+        costEffectivenessButton.primaryButton(imageName: "", imageTitle: "가성비 맛집", backgroundColor: .systemBlue, tintColor: .white, cornerRaius: 10)
+        
     }
     
     func buttonUiDesign(buttonName name:UIButton, buttonTitle title:String, tintColor:UIColor, backgroundColor bgcolor:UIColor) {
@@ -87,7 +110,7 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         filteredList = searchList
         tableView.reloadData()
     }
-   
+    
     @objc func koreanFoodButtonClicked() {
         var koreaFood:[Restaurant] = []
         
@@ -130,12 +153,12 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
     }
     
     @objc func mapkitClicked(){
-          
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-          
+        
         navigationController?.pushViewController(vc, animated: true)
-          
-          
-      }
+        
+        
+    }
     
 }

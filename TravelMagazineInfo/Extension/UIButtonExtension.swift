@@ -10,14 +10,14 @@ import Kingfisher
 
 extension UIButton {
     
-    func primaryButton(imageName:String, imageTitle title: String, backgroundColor bgcolor: UIColor, tintColor: UIColor) {
+    func primaryButton(imageName:String, imageTitle title: String, backgroundColor bgcolor: UIColor, tintColor: UIColor, cornerRaius: CGFloat) {
         
         
         self.setImage(UIImage(systemName: imageName), for: .normal)
         self.setTitle(title, for: .normal)
         self.backgroundColor = bgcolor
         self.tintColor = tintColor
-        
+        self.layer.cornerRadius = cornerRaius
         
         
     }
