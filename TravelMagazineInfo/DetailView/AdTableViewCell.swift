@@ -20,7 +20,7 @@ class AdTableViewCell: UITableViewCell {
        
     }
     
-    func configureAdCell(data:Travel) {
+    func configureAdCell(data:Travel, bgColor:UIColor) {
         adTitleLabel.text = data.title
         
         adTitleLabel.titlePrimaryLabel(textAlignment: .center, fontSize: 14, textColor: .black)
@@ -29,18 +29,9 @@ class AdTableViewCell: UITableViewCell {
         adLabel.backgroundColor = .white
         adLabel.layer.cornerRadius = 7
         adLabel.clipsToBounds = true
-        bgView.backgroundColor = randomColor()
+        bgView.backgroundColor = data.bgView
         bgView.layer.cornerRadius = 10
         
-    }
-   
-    func randomColor() -> UIColor {
-    
-        let randomRed = CGFloat.random(in: 0...1)
-        let randomGreen = CGFloat.random(in: 0...1)
-        let randomBlue = CGFloat.random(in: 0...1)
-        
-        return UIColor(red:randomRed, green: randomGreen, blue: randomBlue, alpha: 0.5)
     }
     
 }

@@ -27,14 +27,11 @@ class PopularityCitiyDetailInfoViewControllerTableViewCell: UITableViewCell {
     }
     
     func configureInfoCell(data: Travel) {
-        guard let urlstring = data.travel_image, let url = URL(string: urlstring), let grade = data.grade, let save = data.save, let like = data.like else {
+        guard let urlstring = data.travel_image, let _ = URL(string: urlstring), let grade = data.grade, let save = data.save, let like = data.like else {
             print("값 없음")
             return }
         
-        
-        citiyDetailImageView.kf.setImage(with: url)
-        citiyDetailImageView.contentMode = .scaleAspectFill
-        citiyDetailImageView?.layer.cornerRadius = 10
+        citiyDetailImageView.primaryImageView(urlString: urlstring, contendMode: .scaleToFill, cornerRadius: 10)
         
         citiyDetailTitleLabel.text = data.title
         

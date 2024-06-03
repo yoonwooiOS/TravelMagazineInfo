@@ -9,17 +9,24 @@ import UIKit
 
 class AdCheckViewController: UIViewController {
 
-    var receiveTitleData:String?
+    
+    var data:Travel?
     
     @IBOutlet var receiveTitleLabel: UILabel!
+    
+    @IBOutlet var backgroundColor: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureNavigationBar()
+        configureLayOut()
         
-        receiveTitleLabel.text = receiveTitleData
+    }
+    func configureLayOut() {
+        backgroundColor.backgroundColor = data?.bgView
+        receiveTitleLabel.text = data?.title
         receiveTitleLabel.titlePrimaryLabel(textAlignment: .center, fontSize: 24, textColor: .black)
-        
     }
     
     @objc func popButton(){

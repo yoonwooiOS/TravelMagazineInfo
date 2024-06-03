@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Travel {
     let title:String
@@ -14,7 +15,7 @@ struct Travel {
     let save:Int?
     var like:Bool?
     let ad:Bool
-    
+    var bgView: UIColor = UIColor.random()
     var saveGrade:String {
         guard let grade = grade, let save = save else { return "" }
         

@@ -42,7 +42,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             
             let adcell = tableView.dequeueReusableCell(withIdentifier: "adcell", for: indexPath) as! AdTableViewCell
             
-            adcell.configureAdCell(data: data)
+            adcell.configureAdCell(data: data, bgColor: UIColor.random())
             
             return adcell
             
@@ -67,7 +67,7 @@ class PopularityCityDetailInfoViewController: UIViewController, UITableViewDeleg
             let vc = storyboard?.instantiateViewController(withIdentifier: "AdCheckViewController") as! AdCheckViewController
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
-            vc.receiveTitleData = data.title
+            vc.data = data
             present(nav, animated: true)
             
         } else {

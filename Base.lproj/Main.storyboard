@@ -313,6 +313,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="55V-hc-iGb"/>
                     <connections>
+                        <outlet property="backgroundColor" destination="2MH-ge-3Vj" id="ite-Kf-xIm"/>
                         <outlet property="receiveTitleLabel" destination="iq6-0w-aCl" id="xze-au-wTr"/>
                     </connections>
                 </viewController>

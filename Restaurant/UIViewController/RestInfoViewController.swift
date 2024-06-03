@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationBarDelegate{
     
     
     @IBOutlet var navigationTitle: UINavigationItem!
@@ -61,7 +61,7 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
     func configureBarButtonItem() {
         
         navigationTitle.title = "오늘 뭐먹지"
-        
+    
         
         let left = UIBarButtonItem(title: "한식", style: .plain, target:self , action: #selector(koreanFoodButtonClicked))
         let all = UIBarButtonItem(title: "전체 식당 보기", style: .plain, target: self, action: #selector(allResButtonClicked))
@@ -75,6 +75,7 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         
     }
+   
     
     func configureTableView() {
         tableView.rowHeight = 160
@@ -92,12 +93,6 @@ class RestInfoViewController: UIViewController,UITableViewDelegate, UITableViewD
         
     }
     
-    func buttonUiDesign(buttonName name:UIButton, buttonTitle title:String, tintColor:UIColor, backgroundColor bgcolor:UIColor) {
-        name.setTitle(title, for: .normal)
-        name.tintColor = tintColor
-        name.backgroundColor = bgcolor
-        name.layer.cornerRadius = 10
-    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         var searchList:[Restaurant] = []
         print(#function)
