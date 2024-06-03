@@ -6,7 +6,11 @@
 //
 
 import UIKit
-
+enum TravelType {
+    case all
+    case domestic
+    case international
+}
 class PopularCityViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet var segmentedControl: UISegmentedControl!
@@ -26,15 +30,19 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
         
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "인기 도시"
         filteredList = cityList
         
         configureTableView()
         configureSegmentedControl()
         
     }
+    
     
     func configureTableView() {
         
@@ -73,7 +81,36 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         
         var locationList:[City] = []
+        //        let filterType: TravelType
         
+        //        switch segmentedControl.selectedSegmentIndex {
+        //        case 0:
+        //            filterType = .all
+        //        case 1:
+        //            filterType = .domestic
+        //        case 2:
+        //            filterType = .international
+        //        default:
+        //            print("Error")
+        //        }
+        //
+        //        switch filterType {
+        //        case .all:
+        //            filteredList = cityList
+        //        case .domestic:
+        //            for city in CityInfo().city {
+        //                if city.domestic_travel {
+        //                    locationList.append(city)
+        //                }
+        //            }
+        //        case .international:
+        //            for city in CityInfo().city {
+        //                if !city.domestic_travel {
+        //                    locationList.append(city)
+        //                }
+        //            }
+        //
+        //        }
         if segmentedControl.selectedSegmentIndex == 0 {
             
             filteredList = cityList
@@ -98,10 +135,44 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             }
             filteredList = locationList
         }
-    
+        //
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard let searchText = searchBar.text , !searchText.isEmpty else {
+            print("값없음")
+            return
+        }
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            var filteredCities: [City] = []
+            for city in cityList {
+                if city.city_name.contains(searchText) || city.city_english_name.contains(searchText) {
+                    filteredCities.append(city)
+                }
+            }
+            filteredList = filteredCities
+        case 1:
+            var domesticList: [City] = []
+            for city in cityList {
+                if city.domestic_travel && (city.city_name.contains(searchText) || city.city_english_name.contains(searchText)) {
+                    domesticList.append(city)
+                }
+            }
+            filteredList = domesticList
+        case 2:
+            var locationList: [City] = []
+            for city in cityList {
+                if !city.domestic_travel && (city.city_name.contains(searchText) || city.city_english_name.contains(searchText)) {
+                    locationList.append(city)
+                }
+            }
+            filteredList = locationList
+        default:
+            print("Error")
+        }
         
     }
     
