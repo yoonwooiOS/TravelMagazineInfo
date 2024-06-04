@@ -6,7 +6,7 @@
 //
 
 import UIKit
-enum TravelType {
+enum TravelType: Int {
     case all
     case domestic
     case international
@@ -71,11 +71,11 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func configureSegmentedControl(){
-        
+        var num = 3
         segmentedControl.selectedSegmentIndex = 3
-        segmentedControl.setTitle("모두", forSegmentAt: 0)
-        segmentedControl.setTitle("국내", forSegmentAt: 1)
-        segmentedControl.setTitle("해외", forSegmentAt: 2)
+        segmentedControl.setTitle("모두", forSegmentAt: TravelType.all.rawValue)
+        segmentedControl.setTitle("국내", forSegmentAt: TravelType.domestic.rawValue)
+        segmentedControl.setTitle("해외", forSegmentAt: TravelType.international.rawValue)
         
     }
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
@@ -111,11 +111,11 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
         //            }
         //
         //        }
-        if segmentedControl.selectedSegmentIndex == 0 {
+        if segmentedControl.selectedSegmentIndex == TravelType.all.rawValue {
             
             filteredList = cityList
             
-        } else if segmentedControl.selectedSegmentIndex == 1 {
+        } else if segmentedControl.selectedSegmentIndex == TravelType.domestic.rawValue {
             
             for city in CityInfo().city {
                 if city.domestic_travel {
@@ -135,7 +135,7 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             }
             filteredList = locationList
         }
-        //
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
